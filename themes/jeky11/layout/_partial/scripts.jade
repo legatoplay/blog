@@ -1,0 +1,37 @@
+- var ga = config.google_analytics
+- var ba = config.baidu_analytics
+
+if ga
+    script
+        | (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',
+        != '"' + ga + '"'
+        | ,'auto');ga('send','pageview');
+if ba
+    script
+        | var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = 
+        != '"' + ba + '"'
+        | ;var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();
+
+//- LaTex
+script(src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
+
+if (page.layout=='post'||page.layout=='page') && page.comments
+    if config.duoshuo_shortname
+        script.
+             var duoshuoQuery = {short_name:"#{config.duoshuo_shortname}"};
+             (function() {
+                 var ds = document.createElement('script');
+                 ds.type = 'text/javascript';ds.async = true;
+                 ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                 ds.charset = 'UTF-8';
+                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+             })();
+            
+    if config.disqus_shortname
+        script.
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = '//#{config.disqus_shortname}.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();

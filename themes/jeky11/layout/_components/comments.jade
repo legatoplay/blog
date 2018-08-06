@@ -1,0 +1,6 @@
+if page.comments
+    .comments
+        if config.duoshuo_shortname
+            .ds-thread(data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
+        if config.disqus_shortname
+            #disqus_thread

@@ -1,0 +1,21 @@
+section.selfintro
+    .wrap.row-flex.row-flex-row.limit-width
+        .sign
+            img(src= config.jekyll.sign_image, alt="")
+        .intro
+            if config.title
+                h3.title
+                    != config.title
+            else 
+                h3.title theme.default.title
+            if config.description
+                p.content 
+                    != config.description
+            else
+                p.content theme.default.description
+            
+            if config.social
+                ul.contact
+                    each value, key in config.social
+                        li
+                            a.social-link(href=value)!= key
