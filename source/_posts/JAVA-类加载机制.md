@@ -5,9 +5,9 @@ tags: [JAVA,JVM]
 category: 基础知识
 ---
 > 摘自：[https://blog.csdn.net/qq_16216221/article/details/71600535](https://blog.csdn.net/qq_16216221/article/details/71600535)  
-   摘自：[http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)
-   摘自：[https://blog.csdn.net/noaman_wgs/article/details/74489549](https://blog.csdn.net/noaman_wgs/article/details/74489549)  
-   
+摘自：[http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)
+摘自：[https://blog.csdn.net/noaman_wgs/article/details/74489549](https://blog.csdn.net/noaman_wgs/article/details/74489549)  
+
 # 一、概述
 类加载是Java程序运行的第一步，研究类的加载有助于了解JVM执行过程，并指导开发者采取更有效的措施配合程序执行，对理解java虚拟机的连接模型和java语言的动态性都有很大帮助。   
 由于Java的跨平台性，经过编译的Java源程序并不是一个可执行程序，而是一个或多个类文件。当Java程序需要使用某个类时，JVM会确保这个类已经被加载、连接（验证、准备和解析）和初始化。  
