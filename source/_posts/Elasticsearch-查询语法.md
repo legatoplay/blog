@@ -2,6 +2,7 @@
 title: Elasticsearch 查询语法
 date: 2019-03-31 20:20:43
 tags: [Elastic]
+category: Elastic
 ---
 > [英文文档(最新)](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html)
 > 
