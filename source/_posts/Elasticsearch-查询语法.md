@@ -30,7 +30,7 @@ Query-string 搜索通过命令非常方便地进行临时性的即席搜索 ，
     }
 }
 ```
-<-- more -->
+<!-- more -->
 参数说明[详见](https://www.elastic.co/guide/en/elasticsearch/reference/6.5/search-request-body.html#_parameters_4)
 
 `from`(defualt:0) & `size`(default:10) **分页**
