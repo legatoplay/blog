@@ -3,3 +3,4 @@
 /public
 /db.json
 /package-lock.json
+.deploy_git
