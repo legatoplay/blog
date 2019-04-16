@@ -1,5 +1,5 @@
 ---
-title: Database Change Notification 基于流的表变化通知
+title: Database Change Notification + AQ 基于流的表变化通知
 date: 2019-03-28 15:09:40
 tags: [Oracle]
 ---
