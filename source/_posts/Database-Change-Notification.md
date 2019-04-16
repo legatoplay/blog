@@ -13,7 +13,7 @@ tags: [Oracle]
 
 # 设置消息队列
 <!-- more -->
-### 1 用户授权
+## 1 用户授权
 ```oracle
 CONNECT / AS SYSDBA;
 GRANT EXECUTE ON DBMS_AQ to GDLISNET;
@@ -22,7 +22,7 @@ GRANT AQ_ADMINISTRATOR_ROLE TO GDLISNET;
 --GRANT ADMINISTER DATABASE TRIGGER TO GDLISNET;
 ```
 
-### 2 创建队列表
+## 2 创建队列表
 ```oracle
 begin
   dbms_aqadm.drop_queue_table(queue_table => 'CATALOG_AQ_TABLE', force => true);
@@ -44,7 +44,7 @@ end;
 
 ```
 
-### 3 创建队列
+## 3 创建队列
 ```oracle
 begin
   dbms_aqadm.drop_queue(queue_name => 'CATALOG_AQ');
@@ -64,7 +64,7 @@ end;
 
 ```
 
-### 4 创建存储过程
+## 4 创建存储过程
 ```oracle
 CREATE OR REPLACE PROCEDURE ENQUEUE_CATALOG_AQ(main_Key   NUMBER,
                                                table_name NVARCHAR2,
@@ -117,21 +117,21 @@ end ENQUEUE_CATALOG_AQ;
 
 ```
 
-### 5 启动队列
+## 5 启动队列
 ```oracle
 begin
   dbms_aqadm.start_queue(queue_name => 'CATALOG_AQ');
 end;
 ```
 
-### 6 停止队列
+## 6 停止队列
 ```oracle
 begin
   dbms_aqadm.stop_queue(queue_name => 'CATALOG_AQ');
 end;
 ```
 
-### 7 入队测试
+## 7 入队测试
 ```oracle
 begin
   enqueue_catalog_aq(ROW_ID     => '1111',
@@ -142,7 +142,7 @@ end;
 select * from catalog_aq_table;
 ```
 
-### 8 出队
+## 8 出队
 ```oracle
 SET SERVEROUTPUT ON
 DECLARE
@@ -167,25 +167,25 @@ END;
 
 ```
 
-### 9 删除队列顺序
+## 9 删除队列顺序
 停止队列--》删除队列-》删除queue_table
 
 # 注册表变化通知（DCN）
 此部分只通知insert和update 变化
-### 1 用户授权
+## 1 用户授权
 ```oracle
 CONNECT / AS SYSDBA;
 GRANT CHANGE NOTIFICATION TO gdlisnet;
 GRANT EXECUTE ON DBMS_CHANGE_NOTIFICATION TO gdlisnet;
 ```
-### 2 修改用户线程数
+## 2 修改用户线程数
 ```oracle
 CONNECT / AS SYSDBA;
 --Rem Enable job queue processes to receive notifications.
 ALTER SYSTEM SET "job_queue_processes"=2;
 ```
 
-### 3 创建存储过程
+## 3 创建存储过程
 ```oracle
 CREATE OR REPLACE PROCEDURE chnf_callback(ntfnds IN cq_notification$_descriptor) AS
   regid            NUMBER;
@@ -238,7 +238,7 @@ END;
 
 ```
 
-### 4 注册
+## 4 注册
 ```oracle
 DECLARE
   REGDS             CQ_NOTIFICATION$_REG_INFO;
@@ -266,14 +266,14 @@ END;
 
 ```
 
-### 5 解除注册
+## 5 解除注册
 ```oracle
 call DBMS_CHANGE_NOTIFICATION.DEREGISTER (regid IN NUMBER);
 ```
 
 
 # 存储过程增加日志方法
-### 1 创建日志表
+## 1 创建日志表
 ```oracle
 -- Create table
 create table TBL_WLF_SYS_LOG
@@ -311,7 +311,7 @@ comment on column TBL_WLF_SYS_LOG.s_advice
   is '建议信息';
 
 ```
-### 创建写日志存储过程
+## 创建写日志存储过程
 ```oracle
 CREATE OR REPLACE PROCEDURE prc_wlf_sys_writelog(i_flag       INTEGER,
                                                           i_id         INTEGER,
@@ -362,7 +362,7 @@ END prc_wlf_sys_writelog;
 
 ```
 
-### 调用
+## 调用
 存储过程中加入异常捕获，并调用`prc_wlf_sys_writelog`做日志调用
 ```oracle
 EXCEPTION
