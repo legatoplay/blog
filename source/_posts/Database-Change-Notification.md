@@ -12,7 +12,7 @@ tags: [Oracle]
 > [CQN](https://docs.oracle.com/cd/B28359_01/appdev.111/b28424/adfns_cqn.htm#CHEIFAEJ)
 
 # 设置消息队列
-
+<!-- more -->
 ### 1 用户授权
 ```oracle
 CONNECT / AS SYSDBA;
