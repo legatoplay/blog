@@ -4,6 +4,7 @@ date: 2019-03-28 14:35:10
 tags: [Hexo,JS]
 category: 前端
 ---
+
 1. npm安装
 
    ```bash
@@ -15,7 +16,7 @@ category: 前端
    ```bash
    hexo -v
    ```
- <!-- more -->
+   <!-- more -->
 
 3. 初始化项目
 
