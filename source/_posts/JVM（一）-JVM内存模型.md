@@ -1,5 +1,5 @@
 ---
-title: 'JVM（一）:JVM内存模型'
+title: 'JVM（一）：JVM内存模型'
 date: 2019-05-10 11:24:12
 tags: [JAVA,基础知识]
 category: [JAVA,JVM]
@@ -83,7 +83,12 @@ table th:first-of-type {
 &emsp;&emsp;在Java虚拟机规范中，对这个区域规定了两种异常状况：
 
 - 若线程请求的栈深度大于虚拟机所允许的深度，将抛出**StackOverflowError**异常。
+
 - 若虚拟机可以动态扩展（当前大部分Java虚拟机都可动态扩展，只不过Java虚拟机规范也允许固定长度的虚拟机栈），当扩展时无法申请到足够的内存，就会抛出**OutOfMemoryError**异常。
+
+------
+
+  
 
 ## 3 . 本地方法栈
 
@@ -96,6 +101,10 @@ table th:first-of-type {
 &emsp;&emsp;在虚拟机规范中对本地方法栈中使用的语言、方式和数据结构并`无强制规定`，因此具体的虚拟机可实现它。甚至有的虚拟机（Sun HotSpot虚拟机）直接把本地方法栈和虚拟机栈合二为一。
 
 &emsp;&emsp;与虚拟机一样，本地方法栈会抛出**StackOverflowError**和**OutOfMemoryError**异常。
+
+------
+
+
 
 ## 4 . Java堆
 
@@ -116,6 +125,10 @@ table th:first-of-type {
 &emsp;&emsp;根据Java虚拟机规范的规定，Java堆可以处于物理上不连续的内存中，只要逻辑上是连续的即可，就像磁盘空间。在实现时，可以实现成固定大小或可扩展的，不过当前主流虚拟机是按照可扩展进行实现的（通过-Xmx和 -Xms控制）。
 
 &emsp;&emsp;若堆中没有内存完成实例分配，并且堆也无法扩展时，将会抛出**OutOfMemoryError**异常。
+
+------
+
+
 
 ##  5 . 方法区
 
@@ -165,6 +178,10 @@ table th:first-of-type {
 ### （3）虚拟机规范记录（有关异常）
 
 &emsp;&emsp;运行时常量池是方法区的一部分，自然受到方法区的内存限制，当常量池无法再申请到内存时会抛出**OutOfMemoryError**异常。
+
+------
+
+
 
 ## 7 . 直接内存
 ### （1）含义作用
