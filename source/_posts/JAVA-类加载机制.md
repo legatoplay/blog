@@ -1,8 +1,8 @@
 ---
 title: JAVA 类加载机制
 date: 2017-11-05 14:10:10
-tags: [JAVA,JVM]
-category: 基础知识
+tags: [基础知识]
+category: [JAVA,类加载机制]
 ---
 
 > 摘自：[https://blog.csdn.net/qq_16216221/article/details/71600535](https://blog.csdn.net/qq_16216221/article/details/71600535)  

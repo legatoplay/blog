@@ -1,8 +1,8 @@
 ---
 title: HashMap实现原理及源码分析-JDK1.7
 date: 2019-04-17 09:21:36
-tags: [JAVA,JAVA集合类]
-category: 基础知识
+tags: [基础知识]
+category: [JAVA,JAVA集合类]
 ---
 
 > 摘自：[https://www.cnblogs.com/chengxiao/p/6059914.html](https://www.cnblogs.com/chengxiao/p/6059914.html)

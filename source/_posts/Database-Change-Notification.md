@@ -2,6 +2,7 @@
 title: Database Change Notification + AQ 基于流的表变化通知
 date: 2019-03-28 15:09:40
 tags: [Oracle]
+category: [数据库]
 ---
 > [Streams Advanced Queuing User's Guide(pl/sql)](https://docs.oracle.com/cd/E11882_01/server.112/e11013/aq_opers.htm#ADQUE1000)
 > [Database JDBC Developer's Guide](https://docs.oracle.com/cd/E11882_01/java.112/e16548/streamsaq.htm#JJDBC28801)

@@ -2,7 +2,7 @@
 title: Spring Boot (一)：自动配置实现原理一
 date: 2019-03-31 22:02:23
 tags: [Spring Boot]
-category: Spring Boot
+category: [JAVA,Spring Boot]
 ---
 SpringBoot 自动配置主要通过 `@EnableAutoConfiguration`, `@Conditional`, `@EnableConfigurationProperties` 或者 `@ConfigurationProperties `等几个注解来进行自动配置完成的。
 

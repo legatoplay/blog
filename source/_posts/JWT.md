@@ -2,7 +2,7 @@
 title: 前后端分离-JWT
 date: 2019-04-17 15:26:17
 tags: [JWT,前后端分离]
-catalog: [前后端分离]
+category: [JWT]
 ---
 
 > 参考：[jwt.io](https://jwt.io/)
